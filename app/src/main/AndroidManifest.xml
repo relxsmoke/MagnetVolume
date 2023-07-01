@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.magnetvolume">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="magnetvolume"
+        android:theme="@android:style/Theme.Material.Light.DarkActionBar">
+		
+		<service
+            android:label="同时静音"
+            android:icon="@drawable/two"
+            android:name=".twoVolume"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action
+                    android:name="android.service.quicksettings.action.QS_TILE" />
+            </intent-filter>
+        </service>
+
+		<service
+            android:label="媒体静音"
+            android:icon="@drawable/one"
+            android:name=".oneVolume"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action
+                    android:name="android.service.quicksettings.action.QS_TILE" />
+            </intent-filter>
+        </service>
+		
+    </application>
+
+</manifest>
